@@ -1,26 +1,37 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import MainLayout from './layouts/MainLayout.vue';
+import HomeView from './views/HomeView.vue';
+import DataView from './views/DataView.vue';
+import TaskView from './views/TaskView.vue';
+import EditorView from './views/EditorView.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'cover',
-    component: () => import('./components/cover.vue'),
-  },
-  {
-    path: '/body-avatar',
-    name: 'body-avatar',
-    component: () => import('./components/human/body_avatar.vue'),
-  },
-  {
-    path: '/NVS',
-    name: 'NVS',
-    component: () => import('./components/scene/body_avatar.vue'),
-  },
-  {
-    path: '/reality',
-    name: 'reality',
-    component: () => import('./components/reality/body_avatar.vue'),
-  },
+    component: MainLayout,
+    children: [
+      {
+        path: '',
+        name: 'Home',
+        component: HomeView
+      },
+      {
+        path: 'data',
+        name: 'Data',
+        component: DataView
+      },
+      {
+        path: 'tasks',
+        name: 'Tasks',
+        component: TaskView
+      },
+      {
+        path: 'editor',
+        name: 'Editor',
+        component: EditorView
+      }
+    ]
+  }
 ];
 
 const router = createRouter({

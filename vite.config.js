@@ -16,4 +16,14 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    fs: {
+      allow: [
+        // Allow serving files from one level up to the project root
+        '..',
+        // Allow serving files from D:/datasets
+        'D:/datasets'
+      ]
+    }
+  }
 })
