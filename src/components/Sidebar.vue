@@ -24,13 +24,13 @@
 .sidebar {
   width: 260px;
   height: 100vh;
-  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-  color: #e2e8f0;
+  background: var(--bg-sidebar);
+  color: var(--text-muted);
   display: flex;
   flex-direction: column;
   padding: 24px;
   box-sizing: border-box;
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid var(--border-color);
   box-shadow: 4px 0 24px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
@@ -39,7 +39,7 @@
   margin-bottom: 48px;
   text-align: center;
   padding-bottom: 24px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .logo h2 {
@@ -47,7 +47,7 @@
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 1px;
-  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
@@ -57,7 +57,7 @@
   display: flex;
   align-items: center;
   padding: 14px 16px;
-  color: #94a3b8;
+  color: var(--text-muted);
   text-decoration: none;
   margin-bottom: 8px;
   border-radius: 8px;
@@ -72,15 +72,15 @@
 }
 
 .nav-item:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #f8fafc;
+  background-color: var(--bg-card-hover);
+  color: var(--text-main);
   transform: translateX(4px);
 }
 
 .nav-item.active {
-  background: rgba(59, 130, 246, 0.15);
-  color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
+  background: rgba(139, 92, 246, 0.1); /* Primary with opacity */
+  color: var(--primary);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.1);
 }
 </style>

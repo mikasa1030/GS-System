@@ -451,14 +451,16 @@ onUnmounted(() => {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
+  background: rgba(28, 33, 40, 0.8);
+  color: var(--text-main);
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
   font-family: monospace;
   font-size: 12px;
   pointer-events: none; /* Let clicks pass through */
   z-index: 10;
+  backdrop-filter: blur(4px);
 }
 
 .info-item {
@@ -467,8 +469,8 @@ onUnmounted(() => {
 
 .selection-box {
   position: absolute;
-  border: 2px solid #00ff00;
-  background-color: rgba(0, 255, 0, 0.2);
+  border: 2px solid var(--success);
+  background-color: rgba(16, 185, 129, 0.2);
   pointer-events: none;
   z-index: 20;
 }
